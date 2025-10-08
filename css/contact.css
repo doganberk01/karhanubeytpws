@@ -1,0 +1,128 @@
+/* Üst açıklama */
+.contact-desc {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+/* Alt bölüm: sosyal medya + form */
+.contact-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Sosyal medya kutusu */
+.social-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* üstte hizalanacak */
+  min-height: auto; /* artık form yüksekliğine bağlı değil */
+}
+
+.social-container a {
+  display: block;
+  width: 100%;
+  padding: 20px 16px; /* biraz daha küçük padding */
+  margin: 20px 0;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Sosyal medya renkleri */
+body[data-theme="light"] .social-container a[href*="linkedin"] {
+  background-color: #d0e7f9; color: #004c7c; border-color: #aacfee;
+}
+body[data-theme="light"] .social-container a[href*="github"] {
+  background-color: #e8e8e8; color: #111; border-color: #c5c5c5;
+}
+body[data-theme="light"] .social-container a[href*="instagram"] {
+  background-color: #fde2e2; color: #b30000; border-color: #fcbcbc;
+}
+body[data-theme="light"] .social-container a[href*="mailto"] {
+  background-color: #e8f6e8; color: #1a7a1a; border-color: #bfe6bf;
+}
+
+.social-container a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Form kutusu */
+.form-container {
+  flex: 2;
+  background: var(--muted-bg);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form elemanları */
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px 14px; /* daha kısa padding */
+  margin-bottom: 14px; /* alt boşluğu azalt */
+  border-radius: 8px;
+  border: 1px solid var(--muted-border);
+  background: var(--card);
+  color: var(--text);
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+/* Sadece mesaj kutusunu biraz daha kısa yapalım */
+#contact-form textarea {
+  min-height: 100px; /* eskiden daha yüksekti */
+  resize: vertical; /* kullanıcıyı kısıtlamıyoruz ama başlangıçta kısa */
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Form button */
+#contact-form button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+#contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 900px) {
+  .contact-main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .social-container, .form-container {
+    width: 100%;
+  }
+
+  .social-container a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}

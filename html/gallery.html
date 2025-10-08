@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubeyt Karhan | Galeri</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/gallery.css">
+<link rel="icon" href="../images/favicon.ico">
+</head>
+<body>
+<header class="header">
+  <button id="menu-toggle">☰</button>
+  <div id="site-info">
+    <h1 id="name">Ubeyt Karhan</h1>
+    <p id="title">Bilgisayar Mühendisi</p>
+  </div>
+  <button id="theme-toggle" aria-label="Tema Değiştir"></button>
+</header>
+
+<div class="container">
+  <aside class="sidebar">
+    <div class="profile"><img src="../images/profile.jpg" alt="Ubeyt Karhan"></div>
+    <nav class="menu">
+      <a href="../index.html" class="menu-item">🏠 Ana Sayfa</a>
+      <a href="about.html" class="menu-item">👨‍💻 Hakkımda</a>
+      <a href="gallery.html" class="menu-item active">🖼️ Galeri</a>
+      <a href="contact.html" class="menu-item">📞 İletişim</a>
+    </nav>
+  </aside>
+  
+  <main class="content">
+    <section class="gallery-section">
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+  </main>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox-overlay" class="hidden">
+  <button class="lightbox-close">&times;</button>
+  <img id="lightbox-image" src="" alt="Büyütülmüş Resim">
+  <button class="lightbox-prev">&#10094;</button>
+  <button class="lightbox-next">&#10095;</button>
+</div>
+
+<footer class="footer">
+  <ul class="socials">
+    <li><a href="https://www.linkedin.com/in/ubeyt-karhan-862851247" target="_blank"><img src="../images/linkedin.png" alt="LinkedIn"></a></li>
+    <li><a href="https://github.com/UbeytKarhan" target="_blank"><img src="../images/github.png" alt="GitHub"></a></li>
+    <li><a href="https://www.instagram.com/the_karhan" target="_blank"><img src="../images/instagram.png" alt="Instagram"></a></li>
+    <li><a href="mailto:ubeytkarhan@gmail.com"><img src="../images/mail.png" alt="Mail"></a></li>
+  </ul>
+  <p>© 2025 Ubeyt Karhan. Tüm hakları saklıdır.</p>
+</footer>
+
+<script src="../javascript/theme.js"></script>
+<script src="../javascript/gallery.js"></script>
+</body>
+</html>

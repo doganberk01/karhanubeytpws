@@ -1,0 +1,32 @@
+/* Hakkımda Sayfası — Bölüm Kartları */
+.section-card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  border: 1px solid var(--muted-border);
+  transition: background 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+}
+.section-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+.section-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--text);
+}
+.info-list { display: flex; flex-direction: column; gap: 16px; }
+.info-item {
+  background: var(--muted-bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 14px 18px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.info-item:hover { background: var(--accent); color: #fff; transform: translateY(-2px); }
+.date { display: block; font-weight: 600; opacity: 0.8; margin-bottom: 6px; }
+.details { margin-top: 8px; margin-left: 20px; line-height: 1.6; }
+.details li { margin-bottom: 6px; }
+@media (max-width: 900px) { .info-list { flex-direction: column; } }
