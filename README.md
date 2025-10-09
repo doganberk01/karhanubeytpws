@@ -9,4 +9,4 @@ It includes information about Ubeyt Karhan, his gallery, and ways to get in touc
 - **Gallery:** Showcase of his photos  
 - **Contact:** How to reach him  
 
-The website is hosted on **GitHub Pages**: [https://ubeytkarhan.github.io](https://ubeytkarhan.github.io)
+The website is hosted on **GitHub Pages**: [https://github.com/doganberk01/ubeytkarhan.github.io](https://github.com/doganberk01/ubeytkarhan.github.io)
