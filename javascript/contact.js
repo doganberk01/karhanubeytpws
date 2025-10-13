@@ -1,7 +1,7 @@
 const form = document.getElementById("contact-form");
 const response = document.getElementById("form-response");
 
-// Form altındaki geri sayım yazısı
+// Geri sayım göstergesi (form altına ekle)
 let countdownDisplay = document.getElementById("form-countdown");
 if (!countdownDisplay) {
   countdownDisplay = document.createElement("div");
@@ -9,13 +9,18 @@ if (!countdownDisplay) {
   form.insertAdjacentElement("afterend", countdownDisplay);
 }
 
-// Ana sayfadaki geri sayım bitiş tarihi
-const savedEndTime = parseInt(localStorage.getItem("countdown-end-date"), 10);
+// Ana sayfadaki bitiş tarihini localStorage'dan al
+const savedEndTime = parseInt(localStorage.getItem("countdownEndDate"), 10);
 
-// Formu ve geri sayımı kontrol eden fonksiyon
 function updateFormCountdown() {
   const now = new Date().getTime();
   const diff = savedEndTime - now;
+
+  if (isNaN(savedEndTime)) {
+    countdownDisplay.textContent = "Sayaç verisi bulunamadı.";
+    form.querySelectorAll("input, textarea, button").forEach(el => el.disabled = true);
+    return;
+  }
 
   if (diff <= 0) {
     countdownDisplay.textContent = "Form artık aktif! Mesaj gönderebilirsiniz.";
@@ -23,10 +28,7 @@ function updateFormCountdown() {
     return;
   }
 
-  // Formu devre dışı bırak
-  form.querySelectorAll("input, textarea, button").forEach(el => el.disabled = true);
-
-  // Geri sayımı göster
+  // Geri sayımı formatla
   const totalSeconds = Math.floor(diff / 1000);
   const days = Math.floor(totalSeconds / (24 * 3600));
   const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
@@ -34,9 +36,11 @@ function updateFormCountdown() {
   const seconds = totalSeconds % 60;
 
   countdownDisplay.textContent = `Form ${days}g ${hours}s ${minutes}d ${seconds}s sonra aktif olacak.`;
+
+  // Formu devre dışı bırak
+  form.querySelectorAll("input, textarea, button").forEach(el => el.disabled = true);
 }
 
-// Sayfa yüklendiğinde hemen çalıştır
 updateFormCountdown();
 setInterval(updateFormCountdown, 1000);
 
