@@ -1,4 +1,4 @@
-# 💼 Ubeyt Karhan – Personal Website  
+# 🌐 Ubeyt Karhan – Personal Website  
 
 A fully responsive **personal portfolio website** created for **Ubeyt Karhan**, a Computer Engineer.  
 It presents information about his background, gallery, and contact details using **HTML**, **CSS**, and **JavaScript**.  
@@ -65,11 +65,11 @@ start index.html
 
 ---
 
-## 👤 Author  
+## 👨‍💻 Author  
 
-**Developed by:** [Doğan Berk](https://github.com/doganberk01)  
-**For:** [Ubeyt Karhan](https://github.com/UbeytKarhan)  
+**Doğan Berk**
 
-📫 Contact: [doganberk019@gmail.com](mailto:doganberk019@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/doganberk01)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/doğan-berk-07a72b201)
 
 ---
